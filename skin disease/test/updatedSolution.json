@@ -1,0 +1,315 @@
+{
+  "total_unique_diseases": 16,
+  "data": [
+    {
+      "disease": "Roseola",
+      "symptoms": [
+        "Abdominal pain",
+        "Body aches",
+        "Chills",
+        "Cough",
+        "Diarrhea",
+        "Fatigue",
+        "Feverish",
+        "Headache",
+        "High fever",
+        "Irritability",
+        "Loss of appetite",
+        "Rash",
+        "Rashes",
+        "Red eyes",
+        "Runny nose",
+        "Sore throat",
+        "Swollen lymph nodes",
+        "Vomiting"
+      ],
+      "first_aid_treatment_1": "Give acetaminophen (Tylenol) or ibuprofen (Advil, Motrin) to reduce fever and pain; do not give aspirin to children",
+      "first_aid_treatment_2": "Ensure plenty of fluids (water, clear liquids, electrolyte solutions like Pedialyte) to prevent dehydration; offer small sips frequently"
+    },
+    {
+      "disease": "Norovirus Infection",
+      "symptoms": [
+        "Abdominal pain",
+        "Body aches",
+        "Chills",
+        "Dehydration",
+        "Diarrhea",
+        "Fatigue",
+        "Fever",
+        "General discomfort",
+        "Headache",
+        "Irritability",
+        "Loss of appetite",
+        "Low-grade fever",
+        "Muscle aches",
+        "Nausea",
+        "Rashes",
+        "Stomach cramps",
+        "Sweating",
+        "Vomiting"
+      ],
+      "first_aid_treatment_1": "Drink plenty of fluids (water, oral rehydration solutions, broth) in small sips every 15-30 minutes to prevent dehydration",
+      "first_aid_treatment_2": "Rest at home and eat soft, bland foods when able; avoid fatty, spicy, and acidic foods that may worsen symptoms"
+    },
+    {
+      "disease": "Shigellosis (Bacillary Dysentery)",
+      "symptoms": [
+        "Abdominal pain or cramps",
+        "Bloody stools",
+        "Body aches",
+        "Chills",
+        "Dehydration",
+        "Diarrhea",
+        "Fatigue",
+        "Fever",
+        "Feverish",
+        "General discomfort",
+        "Headache",
+        "Joint pain",
+        "Loss of appetite",
+        "Muscle aches",
+        "Nausea",
+        "Rashes",
+        "Stomach cramps",
+        "Vomiting"
+      ],
+      "first_aid_treatment_1": "Drink plenty of fluids (water, oral rehydration solutions, broth) to prevent dehydration from diarrhea",
+      "first_aid_treatment_2": "Rest at home and eat soft, bland foods; avoid anti-diarrheal medications like loperamide (Imodium) as they may worsen the infection"
+    },
+    {
+      "disease": "Mumps",
+      "symptoms": [
+        "Fever",
+        "Headache",
+        "Loss of appetite",
+        "Muscle aches",
+        "Pain while chewing or swallowing",
+        "Swollen, painful salivary glands",
+        "Testicle pain and tenderness",
+        "Tiredness",
+        "Trouble chewing"
+      ],
+      "first_aid_treatment_1": "Take acetaminophen (Tylenol) or ibuprofen (Advil, Motrin) for fever and pain relief; do not give aspirin to children",
+      "first_aid_treatment_2": "Drink plenty of fluids and eat soft, easy-to-chew foods; apply warm or cold compresses to swollen glands for comfort"
+    },
+    {
+      "disease": "Strep Throat",
+      "symptoms": [
+        "Abdominal pain",
+        "Body aches",
+        "Fever",
+        "Headache",
+        "Loss of appetite",
+        "Nausea",
+        "Rash",
+        "Red and swollen tonsils",
+        "Sore throat",
+        "Swollen lymph nodes",
+        "White patches on tonsils"
+      ],
+      "first_aid_treatment_1": "Take acetaminophen (Tylenol) or ibuprofen (Advil, Motrin) for fever and throat pain; gargle with warm salt water (1/2 teaspoon salt in 1 cup warm water) 3-4 times daily",
+      "first_aid_treatment_2": "Rest at home, drink plenty of clear fluids (water, warm tea, broth), and take prescribed antibiotics as directed by healthcare provider"
+    },
+    {
+      "disease": "Hand, Foot, and Mouth Disease",
+      "symptoms": [
+        "Blisters",
+        "Cough",
+        "Difficulty swallowing",
+        "Fatigue",
+        "Fever",
+        "General discomfort",
+        "Headache",
+        "Irritability",
+        "Loss of appetite",
+        "Mild fever",
+        "Mouth sores",
+        "Rash on hands and feet",
+        "Red spots",
+        "Sore muscles",
+        "Sore throat",
+        "Sores in mouth"
+      ],
+      "first_aid_treatment_1": "Give acetaminophen (Tylenol) or ibuprofen (Advil, Motrin) to reduce fever and mouth pain; do not give aspirin to children",
+      "first_aid_treatment_2": "Offer plenty of cool fluids and soft foods (yogurt, pudding, smoothies, ice pops) to ease mouth pain and prevent dehydration"
+    },
+    {
+      "disease": "Pertussis (Whooping Cough)",
+      "symptoms": [
+        "Cyanosis (blue lips, tongue, nailbeds)",
+        "Exhaustion",
+        "Fatigue",
+        "Fever",
+        "Low-grade fever",
+        "Nasal discharge",
+        "Runny nose",
+        "Severe coughing fits",
+        "Sneezing",
+        "Sore, watery eyes",
+        "Vomiting after coughing",
+        "Whooping cough"
+      ],
+      "first_aid_treatment_1": "Take prescribed antibiotics (azithromycin, clarithromycin, or erythromycin) as directed by healthcare provider to reduce severity and spread",
+      "first_aid_treatment_2": "Get plenty of rest, drink fluids frequently, eat small frequent meals to prevent vomiting, and use a cool mist humidifier to ease cough"
+    },
+    {
+      "disease": "Scarlet Fever",
+      "symptoms": [
+        "Abdominal pain",
+        "Difficulty swallowing",
+        "Fever",
+        "Fever (100.4\ufffdF / 38.0\ufffdC or higher)",
+        "Headache and body aches",
+        "Nausea or vomiting",
+        "Pale skin around lips",
+        "Red lines in body folds",
+        "Red rash on the body",
+        "Sore and red throat with patches",
+        "Sore throat",
+        "Strawberry tongue",
+        "Swollen glands",
+        "Tender, enlarged neck glands"
+      ],
+      "first_aid_treatment_1": "Take prescribed antibiotics (penicillin or amoxicillin) as directed; do not stop even if feeling better",
+      "first_aid_treatment_2": "Take acetaminophen (Tylenol) or ibuprofen (Advil, Motrin) for fever and pain; drink plenty of cool fluids and eat soft foods if throat is sore"
+    },
+    {
+      "disease": "Common Cold",
+      "symptoms": [
+        "Achy muscles and bones",
+        "Chills",
+        "Headache",
+        "Low-grade fever",
+        "Mild fatigue",
+        "Mild hacking cough",
+        "Scratchy, tickly throat",
+        "Sneezing",
+        "Sore throat",
+        "Stuffy, runny nose",
+        "Watering eyes",
+        "Watery discharge from nose that thickens and turns yellow or green"
+      ],
+      "first_aid_treatment_1": "Get plenty of rest and drink lots of fluids (water, warm tea, broth) to prevent dehydration and loosen mucus",
+      "first_aid_treatment_2": "Take acetaminophen (Tylenol) or ibuprofen (Advil, Motrin) for fever and aches; use saline nasal spray or cool mist humidifier to ease congestion"
+    },
+    {
+      "disease": "Measles",
+      "symptoms": [
+        "Cough",
+        "Hacking cough",
+        "High fever",
+        "Red and watery eyes",
+        "Red eyes",
+        "Running nose",
+        "Runny nose",
+        "Small white spots inside the cheeks",
+        "Tiredness"
+      ],
+      "first_aid_treatment_1": "Take acetaminophen (Tylenol) or ibuprofen (Advil, Motrin) to reduce fever and discomfort; do not give aspirin to children under 16",
+      "first_aid_treatment_2": "Drink plenty of fluids to prevent dehydration, rest in a darkened room if light sensitivity occurs, and use a humidifier or damp cloth for cough relief"
+    },
+    {
+      "disease": "Thrush (Oral Candidiasis)",
+      "symptoms": [
+        "Bad taste in the mouth",
+        "Cotton-like sensation in the mouth",
+        "Difficulty swallowing",
+        "Dry, cracked skin at mouth corners",
+        "Loss of taste",
+        "Redness, irritation, and pain under dentures (denture stomatitis)",
+        "Slight bleeding if spots are scraped",
+        "Soreness or burning in the mouth"
+      ],
+      "first_aid_treatment_1": "Rinse mouth with warm salt water (1/2 teaspoon salt in 1 cup warm water) several times daily to ease pain and reduce inflammation",
+      "first_aid_treatment_2": "Apply prescribed antifungal medication (nystatin oral gel, miconazole, or fluconazole) as directed by healthcare provider for 7-14 days"
+    },
+    {
+      "disease": "Fifth Disease (Erythema Infectiosum)",
+      "symptoms": [
+        "Diarrhea",
+        "Fatigue",
+        "Fever",
+        "Headache",
+        "Malaise",
+        "Mild fever",
+        "Myalgias",
+        "Rash on face",
+        "Runny or stuffy nose",
+        "Sore throat",
+        "Swollen joints",
+        "Vomiting"
+      ],
+      "first_aid_treatment_1": "Take acetaminophen (Tylenol) or ibuprofen (Advil, Motrin) to manage fever, headache, and joint pain; do not give aspirin to children",
+      "first_aid_treatment_2": "Get plenty of rest and drink fluids; the rash is not contagious once it appears, so no specific treatment is needed for mild cases"
+    },
+    {
+      "disease": "Rubella",
+      "symptoms": [
+        "Cough",
+        "Generally feeling unwell (malaise)",
+        "Headache",
+        "Joint pain",
+        "Low fever",
+        "Pink eye",
+        "Rash",
+        "Runny nose",
+        "Sore throat",
+        "Swollen lymph nodes"
+      ],
+      "first_aid_treatment_1": "Take acetaminophen (Tylenol) or ibuprofen (Advil, Motrin) for fever and discomfort; do not give aspirin to children or teenagers",
+      "first_aid_treatment_2": "Get plenty of rest at home and stay away from others (especially pregnant women) for at least 7 days after rash appears to prevent spread"
+    },
+    {
+      "disease": "Head Lice Infestation",
+      "symptoms": [
+        "Difficulty sleeping",
+        "Infection from scratched skin",
+        "Irritability",
+        "Itching",
+        "Itching on the scalp, neck, and ears",
+        "Sores from scratching",
+        "Sores on the scalp",
+        "Tickling feeling",
+        "Tickling sensation in hair",
+        "Trouble sleeping",
+        "Visible lice on the scalp"
+      ],
+      "first_aid_treatment_1": "Apply over-the-counter lice treatment shampoo containing permethrin (Nix) or pyrethrin (Rid) following package directions; repeat treatment in 7-10 days",
+      "first_aid_treatment_2": "Use a fine-tooth nit comb daily for 2-3 weeks to remove lice and nits; wash bedding, clothes, and personal items in hot water (130\u00b0F) and dry on high heat"
+    },
+    {
+      "disease": "Conjunctivitis (Pink Eye)",
+      "symptoms": [
+        "Blurred vision (intermittent)",
+        "Burning sensation in the eyes",
+        "Dry or watery eyes (epiphora)",
+        "Eye discharge (yellowish, greenish, or white; may cause crusting)",
+        "Itchy or irritated eyes",
+        "Light sensitivity (photophobia)",
+        "Mild eye pain or discomfort",
+        "Redness in the white of the eye (sclera) or inner eyelid",
+        "Sensation of a foreign object in the eye",
+        "Swollen eyelids (blepharitis)"
+      ],
+      "first_aid_treatment_1": "Apply cold or warm compresses to eyes for a few minutes to reduce swelling and discomfort; clean away discharge with clean cotton or cloth",
+      "first_aid_treatment_2": "Use artificial tears eye drops to relieve dryness; stop wearing contact lenses until symptoms resolve; wash hands frequently to prevent spread"
+    },
+    {
+      "disease": "Impetigo",
+      "symptoms": [
+        "Blisters",
+        "Clustered sores",
+        "Discolored marks",
+        "Discolored sores",
+        "Fever",
+        "Itchiness",
+        "Pain",
+        "Redness",
+        "Swelling",
+        "Yellow crust"
+      ],
+      "first_aid_treatment_1": "Wash sores gently with antibacterial soap and warm water 2-3 times daily, soaking off any crusts; pat dry with clean towel",
+      "first_aid_treatment_2": "Apply prescribed antibiotic ointment or cream (mupirocin) 2-3 times daily and cover with waterproof bandage to prevent spreading; complete full antibiotic course"
+    }
+  ]
+}
