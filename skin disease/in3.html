@@ -4,163 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Image Analyzer</title>
-
-    <!-- Combined UI from in3.html -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: 'Inter', sans-serif;
-      }
-
-      body {
-        background: #0e1117;
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        padding: 20px;
-      }
-
-      header {
-        text-align: center;
-        margin-bottom: 30px;
-      }
-
-      header h1 {
-        font-size: 1.8rem;
-        font-weight: 600;
-        margin-bottom: 8px;
-      }
-
-      header p {
-        color: #bbb;
-        font-size: 0.95rem;
-      }
-
-      .container {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 16px;
-        padding: 30px;
-        max-width: 400px;
-        width: 100%;
-        text-align: center;
-        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-      }
-
-      .upload-area {
-        border: 2px dashed rgba(255, 255, 255, 0.2);
-        border-radius: 12px;
-        padding: 40px 20px;
-        transition: 0.3s ease;
-        cursor: pointer;
-        color: #bbb;
-        font-size: 0.95rem;
-      }
-
-      .upload-area:hover {
-        background: rgba(255, 255, 255, 0.05);
-        border-color: #00e6e6;
-        color: #00e6e6;
-      }
-
-      input[type='file'] {
-        display: none;
-      }
-
-      img {
-        margin-top: 20px;
-        max-width: 100%;
-        border-radius: 12px;
-        display: none;
-        position: relative;
-        left: 60px;
-        top: -60px;
-      }
-
-      button {
-        background: #00e6e6;
-        border: none;
-        border-radius: 8px;
-        color: #0e1117;
-        padding: 10px 20px;
-        font-weight: 600;
-        font-size: 1rem;
-        margin-top: 20px;
-        width: 100%;
-        cursor: pointer;
-        transition: 0.2s ease;
-      }
-
-      button:hover {
-        opacity: 0.9;
-        transform: translateY(-1px);
-      }
-
-      button:disabled {
-        background: #444;
-        color: #aaa;
-        cursor: not-allowed;
-        transform: none;
-      }
-
-      #label-container {
-        margin-top: 20px;
-        text-align: left;
-      }
-
-      #label-container div {
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 6px;
-        padding: 8px 12px;
-        font-size: 0.95rem;
-        margin-bottom: 6px;
-        display: flex;
-        justify-content: space-between;
-      }
-
-      footer {
-        margin-top: 40px;
-        font-size: 0.8rem;
-        color: #888;
-        text-align: center;
-      }
-
-      @media (max-width: 480px) {
-        header h1 {
-          font-size: 1.5rem;
-        }
-        .container {
-          padding: 20px;
-        }
-        .upload-area {
-          padding: 30px 10px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <header>
+    <nav>
       <h1>🧠 AI Image Analyzer</h1>
-      <p>Upload an image to analyze it using your Teachable Machine model</p>
-    </header>
+    </nav>
 
     <div class="container">
+      <header>
+        <h2>Image Analysis</h2>
+        <p>Upload an image to analyze it</p>
+      </header>
+
       <label for="image-upload" class="upload-area" id="upload-box">
-        📁 Click or Drop an Image
+        <div class="upload-icon">📁</div>
+        <span>Click or Drop an Image Here</span>
       </label>
       <input type="file" id="image-upload" accept="image/*" />
-      <img id="uploaded-image" />
+      <img id="uploaded-image" alt="Uploaded Image" />
       <button id="analyze-btn" onclick="analyzeImage()" disabled>
         Analyze Image
       </button>
@@ -168,10 +31,10 @@
     </div>
 
     <footer>
-      Madded by team Void Escapers , maded under AI Manthan hackathon
+      Made by team Void Escapers, made under Void Hacks 7.0 hackathon
     </footer>
 
-    <!-- Keep original indx2.html logic -->
+    <!-- Keep original logic -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 
@@ -186,9 +49,14 @@
       window.addEventListener('load', async () => {
         const modelURL = URL + 'model.json'
         const metadataURL = URL + 'metadata.json'
-        model = await tmImage.load(modelURL, metadataURL)
-        maxPredictions = model.getTotalClasses()
-        console.log('Model loaded successfully')
+        try {
+          model = await tmImage.load(modelURL, metadataURL)
+          maxPredictions = model.getTotalClasses()
+          console.log('Model loaded successfully')
+        } catch (e) {
+          console.error('Error loading model:', e)
+          alert('Error loading model. Please check the console.')
+        }
       })
 
       imageUpload.addEventListener('change', (event) => {
@@ -205,17 +73,17 @@
       })
 
       async function analyzeImage() {
+        if (!model) return
         const prediction = await model.predict(uploadedImage)
         labelContainer.innerHTML = ''
 
         for (let i = 0; i < maxPredictions; i++) {
           const classPrediction = `
-            ${prediction[i].className}: ${(
-            prediction[i].probability * 100
-          ).toFixed(1)}%
+            <span>${prediction[i].className}</span>
+            <span>${(prediction[i].probability * 100).toFixed(1)}%</span>
           `
           const div = document.createElement('div')
-          div.textContent = classPrediction
+          div.innerHTML = classPrediction
           labelContainer.appendChild(div)
         }
       }
@@ -226,17 +94,20 @@
       const uploadBox = document.getElementById('upload-box')
       uploadBox.addEventListener('dragover', (e) => {
         e.preventDefault()
-        uploadBox.style.borderColor = '#00e6e6'
-        uploadBox.style.color = '#00e6e6'
+        uploadBox.style.borderColor = '#10b981'
+        uploadBox.style.color = '#10b981'
+        uploadBox.style.background = 'rgba(255, 255, 255, 0.05)'
       })
       uploadBox.addEventListener('dragleave', () => {
-        uploadBox.style.borderColor = 'rgba(255,255,255,0.2)'
-        uploadBox.style.color = '#bbb'
+        uploadBox.style.borderColor = 'rgba(51, 65, 85, 0.5)'
+        uploadBox.style.color = '#e2e8f0'
+        uploadBox.style.background = 'rgba(255, 255, 255, 0.02)'
       })
       uploadBox.addEventListener('drop', (e) => {
         e.preventDefault()
-        uploadBox.style.borderColor = 'rgba(255,255,255,0.2)'
-        uploadBox.style.color = '#bbb'
+        uploadBox.style.borderColor = 'rgba(51, 65, 85, 0.5)'
+        uploadBox.style.color = '#e2e8f0'
+        uploadBox.style.background = 'rgba(255, 255, 255, 0.02)'
         const file = e.dataTransfer.files[0]
         if (file) {
           const reader = new FileReader()
